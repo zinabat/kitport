@@ -1,0 +1,37 @@
+Overall tasks to complete
+
+1. Build content management system
+    a. Auth - Login/Logout
+        i. OAuth
+    b. Posts - CRUD
+        i. WYSIWYG
+        ii. Image uploads
+    c. Pages - CRUD
+        i. Landing page
+        ii. View posts by date
+        iii. About
+        iv. Contact
+        v. Site Map
+    d. Image management - CRUD
+        i. folders
+        ii. crop tool
+    e. Styles - CRUD ?
+        i. automatic create from CSS file upload
+        ii. content for stylesheet is in file, not database
+        iii. style is associated with a database entry
+2. Write articles
+    a. At least 10 topics, all detailing the process
+    b. At least 5 should have interactive javascript
+3. Create 10-15 responsive, accessible designs
+    a. Added in 1.e., associated with pages and/or posts
+    b. Each hand drawn first
+    c. Each should have a mockup
+    d. Original graphical images created per design
+        i. Ink
+        ii. Watercolour
+        iii. Digital
+    e. Implementation must be easy to read on any screen, accessible via WIA-ARIA standards
+4. Brand documentation
+    a. Should be a page
+    b. Logo, color scheme, font
+    c. Creative voice, audience
