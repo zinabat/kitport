@@ -3,7 +3,13 @@ A customizable content management system for blogs and
 portfolios. A CMS without the fluff, built with Laravel.
 
 ## Installation
-[coming]
+Change the ```.env.example``` file and add a 32-bit application key. Add database information.
+```bash
+composer install 
+php artisan migrate
+php artisan serve
+```
+Verify the application is being served correctly at the URI specified in the .env file.
 
 ## Notes
 * Sound of its own making - Robert Morris
@@ -14,23 +20,23 @@ portfolios. A CMS without the fluff, built with Laravel.
 ## Tasks to Complete
 1. Build content management system
     1. Auth - Login/Logout
-        i. OAuth
+        1. OAuth
     2. Posts - CRUD
-        i. WYSIWYG
-        ii. Image uploads
+        1. WYSIWYG
+        2. Image uploads
     3. Pages - CRUD
-        i. Landing page
-        ii. View posts by date
-        iii. About
-        iv. Contact
-        v. Site Map
+        1. Landing page
+        2. View posts by date
+        3. About
+        4. Contact
+        5. Site Map
     4. Image management - CRUD
-        i. folders
-        ii. crop tool
+        1. folders
+        2. crop tool
     5. Styles - CRUD ?
-        i. automatic create from CSS file upload
-        ii. content for stylesheet is in file, not database
-        iii. style is associated with a database entry
+        1. automatic create from CSS file upload
+        2. content for stylesheet is in file, not database
+        3. style is associated with a database entry
 2. Write articles
     1. At least 10 topics, all detailing the process
     2. At least 5 should have interactive javascript
@@ -39,9 +45,9 @@ portfolios. A CMS without the fluff, built with Laravel.
     2. Each hand drawn first
     3. Each should have a mockup
     4. Original graphical images created per design
-        i. Ink
-        ii. Watercolour
-        iii. Digital
+        1. Ink
+        2. Watercolour
+        3. Digital
     5. Implementation must be easy to read on any screen, accessible via WIA-ARIA standards
 4. Brand documentation
     1. Should be a page
