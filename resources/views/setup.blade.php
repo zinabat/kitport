@@ -18,16 +18,20 @@
           <h1>
             {{ config('app.name') }}
           </h1>
-          Give life to your Kit!
+          Set up your Kit!
         </header>
 
         <div class="card">
-        <form method="post" action="#" class="card-body">
+        <form method="post" action="{{ route('setup') }}" class="card-body">
+          {{ csrf_field() }}
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="email@example.com" name="email">
+            <input type="text" class="form-control" placeholder="Name" name="name" required>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="password">
+            <input type="email" class="form-control" placeholder="email@example.com" name="email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="password" required>
           </div>
           <div class="form-group">
             <button class="btn btn-primary">Hatch my Kit</button>

@@ -12,9 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('setup');
+    // if first-time setup, redirect to the setup page
+    // cache this later
+    $kit_level = DB::table('config')->where('name', 'kit_level')->first();
+    if ($kit_level->value === '0') {
+        return view('setup');
+    }
+    //otherwise
+    return view('welcome');
 });
+
+Route::post('/setup', 'SetupController@register')->name('setup');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', function() {
+  return view('layouts/admin');
+})->middleware('admin');

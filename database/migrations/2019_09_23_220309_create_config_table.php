@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class CreateRoleTable extends Migration
+class CreateConfigTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,16 @@ class CreateRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('config', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('value');
+            $table->timestamps();
         });
 
-        DB::table('role')->insert([
-            ['name' => 'superadmin'],
-            ['name' => 'admin'],
-            ['name' => 'moderator']
+        DB::table('config')->insert([
+            ['name' => 'kit_level', 'value' => '0'],
+            ['name' => 'kit_animal', 'value' => 'kitsune']
         ]);
     }
 
@@ -33,6 +34,6 @@ class CreateRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('config');
     }
 }

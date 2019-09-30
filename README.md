@@ -11,6 +11,8 @@ php artisan serve
 ```
 Verify the application is being served correctly at the URI specified in the .env file.
 
+A setup page should be displayed. This page allows a one-time setup of a super-administrative user.
+
 ## Notes
 * Sound of its own making - Robert Morris
 * didactic function
@@ -20,7 +22,7 @@ Verify the application is being served correctly at the URI specified in the .en
 ## Tasks to Complete
 1. Build content management system
     1. Auth - Login/Logout
-        1. OAuth
+        1. Admin setup page
     2. Posts - CRUD
         1. WYSIWYG
         2. Image uploads
