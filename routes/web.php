@@ -30,4 +30,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', function() {
   return view('layouts/admin');
-})->middleware('admin');
+})->middleware('admin')
+  ->name('admin.home');
+
+Route::resource('admin/posts', 'PostController')->middleware('admin');
+
+Route::get('/posts', 'DisplayPostController@index')->name('posts');
+Route::get('/posts/{id}', 'DisplayPostController@showOne')->name('showPost');

@@ -41,6 +41,14 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
 
+    /**
+     * Get all user's authored posts
+     * @return Post objects
+     */
+    public function posts() {
+        return $this->hasMany('App\Post');
+    }
+
     public function isAdmin() {
         return $this->role->name === 'admin' ||
             $this->role->name === 'superadmin';

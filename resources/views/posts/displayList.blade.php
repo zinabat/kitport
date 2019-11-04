@@ -2,6 +2,8 @@
 
 @section('content')
 <div class="container">
-    Home page
+    @foreach($posts as $post)
+    {{ $post }}
+    @endforeach
 </div>
 @endsection
